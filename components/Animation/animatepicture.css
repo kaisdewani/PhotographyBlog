@@ -1,0 +1,35 @@
+.video-stack-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centers vertically */
+    min-height: 100vh;
+  }
+  
+  .video-stack {
+    position: absolute;
+    width: 480px;
+    height: 270px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto; /* Adds automatic margins on all sides */
+  }
+  
+  .video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: auto;
+    transform: translate(-50%, -50%);
+  }
+  
+  .video:nth-child(2) {
+    transform: translate(-50%, -50%) rotate(-55deg);
+  }
+  
+  .video:nth-child(3) {
+    transform: translate(-50%, -50%) rotate(-13deg);
+  }
+  
