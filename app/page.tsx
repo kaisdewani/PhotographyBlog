@@ -1,6 +1,7 @@
 "use client"
 
-import PicturesAnimate from "@/components/Animation/PicturesAnimate";
+import PicturesAnimate from "@/components/PicturesAnimate";
+import ScrollingText from "@/components/ScrollingText";
 
 import Lenis from '@studio-freight/lenis'
 import { useEffect } from "react";
@@ -22,7 +23,10 @@ export default function Home() {
   return (
     <>
       <PicturesAnimate />
-      <div style={{ paddingTop: '100vh' }}><p>Something someting</p></div>
+      <ScrollingText/>
+      <div style={{ paddingTop: '100vh' }}>
+        testing
+      </div>
 
     </>
   );
