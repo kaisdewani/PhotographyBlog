@@ -1,7 +1,7 @@
 "use client"
 
 import PicturesAnimate from "@/components/Animation/PicturesAnimate";
-import { Navbar } from "@/components/Navbar";
+
 import Lenis from '@studio-freight/lenis'
 import { useEffect } from "react";
 

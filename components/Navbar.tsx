@@ -8,7 +8,7 @@ import { ModeToggle } from "./ModeToggle";
 
 export const Navbar = () => {
     return (
-        <nav className="fixed left-[50%] top-8 flex w-fit -translate-x-[50%] items-center gap-6 rounded-lg border-[1px] border-neutral-700 bg-neutral-900 p-2 text-sm text-neutral-500 z-1">
+        <nav className="fixed left-[50%] top-8 flex w-fit -translate-x-[50%] items-center gap-6 rounded-lg border-[1px] border-neutral-700 bg-neutral-900 p-2 text-sm text-neutral-500 z-50">
             <Logo />
 
             <NavLink>Home</NavLink>
