@@ -1,6 +1,7 @@
 "use client"
 
 import PicturesAnimate from "@/components/Animation/PicturesAnimate";
+import { Navbar } from "@/components/Navbar";
 import Lenis from '@studio-freight/lenis'
 import { useEffect } from "react";
 
@@ -19,9 +20,8 @@ export default function Home() {
 
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <PicturesAnimate />
-      <p className="bg-red-400">Something something</p>
-    </main>
+    <>
+        <PicturesAnimate />
+    </>
   );
 }
