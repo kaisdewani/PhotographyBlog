@@ -12,7 +12,7 @@ const PicturesAnimate = () => {
       scrollTrigger: {
         trigger: ".secondvideo",
         start: "center center",
-        end: "800% center",
+        end: "500% center",
         scrub: true,
         markers: true
       }
@@ -28,9 +28,9 @@ const PicturesAnimate = () => {
 
     // Phase 2: Animations for resizing the second image
     tl.to(".secondvideo", {
-      width: "400vw",
-      height: "200vh",
-      xPercent: -80,
+      width: "80vw",
+      height: "80vh",
+      xPercent: -25,
       yPercent: -50,
       ease: "none",
       duration: 3, // Duration for resizing

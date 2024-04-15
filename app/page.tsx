@@ -21,7 +21,9 @@ export default function Home() {
 
   return (
     <>
-        <PicturesAnimate />
+      <PicturesAnimate />
+      <div style={{ paddingTop: '100vh' }}><p>Something someting</p></div>
+
     </>
   );
 }
