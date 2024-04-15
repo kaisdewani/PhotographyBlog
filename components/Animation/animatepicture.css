@@ -3,33 +3,33 @@
     justify-content: center;
     align-items: center; /* Centers vertically */
     min-height: 100vh;
-  }
-  
-  .video-stack {
+}
+
+.video-stack {
     position: absolute;
-    width: 480px;
-    height: 270px;
+    width: 480px; /* Width of the video stack */
+    height: 270px; /* Height of the video stack */
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    margin: auto; /* Adds automatic margins on all sides */
-  }
-  
-  .video {
+    margin: auto; /* Centers the video stack in the middle of the viewport */
+}
+
+.video {
+    will-change: transform;
     position: absolute;
     top: 50%;
     left: 50%;
     width: 100%;
     height: auto;
-    transform: translate(-50%, -50%);
-  }
-  
-  .video:nth-child(2) {
-    transform: translate(-50%, -50%) rotate(-55deg);
-  }
-  
-  .video:nth-child(3) {
-    transform: translate(-50%, -50%) rotate(-13deg);
-  }
-  
+    transform: translate(-50%, -50%) scale(1.3); /* Scales the video size up by 30% */
+}
+
+.video:nth-child(2) {
+    transform: translate(-50%, -50%) scale(1.3) rotate(-55deg); /* Includes the scale transformation with rotation */
+}
+
+.video:nth-child(3) {
+    transform: translate(-50%, -50%) scale(1.3) rotate(-13deg); /* Includes the scale transformation with rotation */
+}

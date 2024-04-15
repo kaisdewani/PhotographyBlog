@@ -1,5 +1,8 @@
+"use client"
+
+
 import React from 'react';
-import PropTypes from 'prop-types';
+import { motion, useViewportScroll, useTransform } from 'framer-motion';
 import "./animatepicture.css";
 
 const videoSources = [
@@ -9,23 +12,32 @@ const videoSources = [
 ];
 
 const PicturesAnimate = () => {
+  const { scrollYProgress } = useViewportScroll();
+  const y = useTransform(scrollYProgress, [0, 1], [0, 360]); // Vertical movement range
+  const x = useTransform(scrollYProgress, [0, 1], [0, -200]); // Horizontal movement to the left
+
   return (
     <div className="video-stack-wrapper">
       <div className="video-stack">
-        {videoSources.map((src, index) => (
-          <video key={index} className={`video ${index === 0 ? 'firstvideo' : index === 1 ? 'secondvideo' : 'thirdvideo'}`} autoPlay loop muted>
-            <source src={src} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        ))}
+        {videoSources.map((src, index) => {
+          if (index === 1) {
+            return (
+              <motion.video key={index} className="video secondvideo" style={{ x, y }} autoPlay loop muted>
+                <source src={src} type="video/mp4" />
+                Your browser does not support the video tag.
+              </motion.video>
+            );
+          }
+          return (
+            <video key={index} className={`video ${index === 0 ? 'firstvideo' : index === 2 ? 'thirdvideo' : ''}`} autoPlay loop muted>
+              <source src={src} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          );
+        })}
       </div>
     </div>
   );
-};
-
-// Type checking for props
-PicturesAnimate.propTypes = {
-  videoSources: PropTypes.arrayOf(PropTypes.string)
 };
 
 export default PicturesAnimate;
