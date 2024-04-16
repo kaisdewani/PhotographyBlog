@@ -56,15 +56,15 @@ const PicturesAnimate = () => {
                   <div style={{ width: `${52}vw`, height: `${26}vh` }} className='relative'> {/* Adjusted sizes */}
                       {/* First Image - No animations associated */}
                       <div className='absolute inset-0 grid place-items-center' style={{ transform: 'rotate(-3deg)' }}>
-                          <img src="https://images.squarespace-cdn.com/content/v1/627c22495272990f0921a1ea/8ee8ee95-a9cb-4ebe-ad30-a40c44b0582b/Untitled.jpg?format=2500w" alt="Blue Visual" className="w-full h-full object-cover" />
+                          <img src="https://images.squarespace-cdn.com/content/v1/627c22495272990f0921a1ea/8ee8ee95-a9cb-4ebe-ad30-a40c44b0582b/Untitled.jpg?format=2500w" alt="Blue Visual" className="w-full h-full object-cover rounded-lg" />
                       </div>
                       {/* Second Image - Animations associated */}
                       <div className='secondvideo absolute inset-0 grid place-items-center' style={{ transform: 'rotate(3deg)' }}>
-                          <img src="https://images.squarespace-cdn.com/content/v1/627c22495272990f0921a1ea/d6c4943d-5fa6-4f86-b856-3e63da926682/Untitled.jpg" alt="Red Visual" className="w-full h-full object-cover" />
+                          <img src="https://images.squarespace-cdn.com/content/v1/627c22495272990f0921a1ea/d6c4943d-5fa6-4f86-b856-3e63da926682/Untitled.jpg" alt="Red Visual" className="w-full h-full object-cover rounded-lg" />
                       </div>
                       {/* Third Image - No animations associated */}
                       <div className='absolute inset-0 grid place-items-center' style={{ transform: 'rotate(20deg)' }}>
-                          <img src="https://images.squarespace-cdn.com/content/v1/627c22495272990f0921a1ea/6bf520dc-f69c-49e5-9eaf-e57b91153c05/Untitled.jpg" alt="Yellow Visual" className="w-full h-full object-cover" />
+                          <img src="https://images.squarespace-cdn.com/content/v1/627c22495272990f0921a1ea/6bf520dc-f69c-49e5-9eaf-e57b91153c05/Untitled.jpg" alt="Yellow Visual" className="w-full h-full object-cover rounded-lg" />
                       </div>
                   </div>
               </div>
