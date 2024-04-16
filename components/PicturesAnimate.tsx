@@ -96,7 +96,7 @@ const PicturesAnimate: React.FC = () => {
                 transform: `rotate(${index * 3 - 3}deg)`
               }}>
                 <div style={{ width: '100%', height: '100%', position: 'relative' }}>
-                  <Image src={image} alt={`Visual ${index + 1}`} fill objectFit="cover" className="rounded-lg" />
+                  <Image src={image} alt={`Visual ${index + 1}`} fill sizes="1" className="rounded-lg" />
                 </div>
               </div>
             ))}
