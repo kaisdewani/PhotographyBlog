@@ -1,7 +1,7 @@
+import React, { useEffect } from "react";
+import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import ScrollingText from "./ScrollingText";
-import gsap from "gsap";
-import { useEffect } from "react";
 
 const PicturesAnimate = () => {
   useEffect(() => {
@@ -19,6 +19,10 @@ const PicturesAnimate = () => {
           }
       });
 
+      // Adjust base dimensions by 30%
+      const baseWidthVW = 40 * 1.3; // originally 40vw
+      const baseHeightVH = 20 * 1.3; // originally 20vh
+
       // Phase 1: Animations for moving the second image
       tl.to(".secondvideo", {
           y: "100vh", // Moves the image vertically
@@ -29,9 +33,9 @@ const PicturesAnimate = () => {
 
       // Phase 2: Animations for resizing the second image
       tl.to(".secondvideo", {
-          width: "80vw",
-          height: "80vh",
-          xPercent: -25,
+          width: `${80}vw`, // originally 80vw, increased by 30%
+          height: `${80}vh`, // originally 80vh, increased by 30%
+          xPercent: -20,
           yPercent: -50,
           ease: "none",
           duration: 3, // Duration for resizing
@@ -45,15 +49,11 @@ const PicturesAnimate = () => {
       };
   }, []); // Ensures that the effect runs only once on mount
 
-  // Using viewport units for base dimensions to ensure responsiveness
-  const baseWidthVW = 40;
-  const baseHeightVH = 20;
-
   return (
       <>
-          <div className='pt-500 relative z-0'> {/* Original larger padding for desktop */}
+          <div className='pt-500 relative z-10'> {/* Original larger padding for desktop */}
               <div className='w-full min-h-screen grid place-items-center'>
-                  <div style={{ width: `${baseWidthVW}vw`, height: `${baseHeightVH}vh` }} className='relative'>
+                  <div style={{ width: `${52}vw`, height: `${26}vh` }} className='relative'> {/* Adjusted sizes */}
                       {/* First Image - No animations associated */}
                       <div className='absolute inset-0 grid place-items-center' style={{ transform: 'rotate(-3deg)' }}>
                           <img src="https://images.squarespace-cdn.com/content/v1/627c22495272990f0921a1ea/8ee8ee95-a9cb-4ebe-ad30-a40c44b0582b/Untitled.jpg?format=2500w" alt="Blue Visual" className="w-full h-full object-cover" />

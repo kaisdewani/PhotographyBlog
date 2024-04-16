@@ -26,7 +26,12 @@ export default function Home() {
       <div style={{ paddingTop: '120vh' }}>
         <h1>something</h1>
       </div>
-
+      <div style={{ paddingTop: '120vh' }}>
+        <h1>something</h1>
+      </div>
+      <div style={{ paddingTop: '120vh' }}>
+        <h1>something</h1>
+      </div>
     </>
   );
 }

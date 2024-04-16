@@ -4,8 +4,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const ScrollingText: React.FC = () => {
     const railRef = useRef<HTMLDivElement>(null);
-    const [lastScrollTop, setLastScrollTop] = useState(0);
-    const [scrollSpeed, setScrollSpeed] = useState(0); // Current speed of the scroll
+    const [lastScrollTop, setLastScrollTop] = useState(1);
+    const [scrollSpeed, setScrollSpeed] = useState(1); // Current speed of the scroll
     const [targetSpeed, setTargetSpeed] = useState(1); // Target speed (1 or -1)
 
     useEffect(() => {
@@ -18,7 +18,7 @@ const ScrollingText: React.FC = () => {
                 // Up scroll, scrolling to the left
                 setTargetSpeed(-1);
             }
-            setLastScrollTop(st <= 0 ? 0 : st); // For Mobile or negative scrolling
+            setLastScrollTop(st <= 0 ? 0 : st); // For mobile or negative scrolling
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -56,12 +56,17 @@ const ScrollingText: React.FC = () => {
         };
     }, [targetSpeed]);
 
+    // Create an array of 10 elements to map over
+    const texts = Array.from({ length: 10 }, (_, i) => `D.R.A Films`);
+
     return (
-        <div className="overflow-hidden flex justify-center items-center z-10 absolute left-0 right-0" style={{ top: '60%' }}>
+        <div className="overflow-hidden flex justify-center items-center z-1 absolute left-0 right-0" style={{ top: '60%' }}>
             <div ref={railRef} className="flex whitespace-nowrap">
-                <h4 className="text-8xl font-bold mx-8 text-white">Lorem Ipsum Sit Dolor</h4>
-                <h4 className="text-8xl font-bold mx-8 text-white">Lorem Ipsum Sit Dolor</h4>
-                <h4 className="text-8xl font-bold mx-8 text-white">Lorem Ipsum Sit Dolor</h4>
+                {texts.map((text, index) => (
+                    <h1 key={index} className="text-8xl font-bold mx-8 text-white">
+                        {text}
+                    </h1>
+                ))}
             </div>
         </div>
     );
