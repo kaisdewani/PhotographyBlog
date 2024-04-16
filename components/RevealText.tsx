@@ -49,9 +49,10 @@ const FadeUpText: React.FC = () => {
   }, [isMobile]); // Re-run this effect when isMobile changes
 
   // Example text split by new lines
-  const text = `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Phasellus pellentesque metus ligula. Vestibulum luctus luctus ex nec cursus.
-Suspendisse sed tincidunt lorem. Ut pulvinar at est vel consectetur.`;
+  const text = `Discover the art of professional photography with D.J.A Films. 
+  From heartfelt wedding vows to thrilling sports action and elegant corporate gatherings, 
+  we masterfully capture and craft your stories into timeless photos and videos. 
+  Elevate your memories with clarity and style — experience your events as never before.`;
 
   // Splitting the text into lines
   const lines = text.split('\n');
