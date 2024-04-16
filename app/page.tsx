@@ -1,7 +1,5 @@
 "use client"
-
 import PicturesAnimate from "@/components/PicturesAnimate";
-import ScrollingText from "@/components/ScrollingText";
 
 import Lenis from '@studio-freight/lenis'
 import { useEffect } from "react";
