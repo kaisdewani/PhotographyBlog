@@ -57,13 +57,13 @@ const ScrollingText: React.FC = () => {
     }, [targetSpeed]);
 
     // Create an array of 10 elements to map over
-    const texts = Array.from({ length: 30 }, (_, i) => `D.R.A Films`);
+    const texts = Array.from({ length: 100 }, (_, i) => `D.R.A Films`);
 
     return (
         <div className="overflow-hidden flex justify-center items-center z-1 absolute left-0 right-0" style={{ top: '60%' }}>
             <div ref={railRef} className="flex whitespace-nowrap">
                 {texts.map((text, index) => (
-                    <h1 key={index} className="text-8xl font-bold mx-8 text-white">
+                    <h1 key={index} className="text-8xl font-bold mx-8">
                         {text}
                     </h1>
                 ))}
