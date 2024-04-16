@@ -28,7 +28,8 @@ export default {
       options: {
         hotspot: true, // Enables image hotspot positioning
       },
-      description: 'Upload images here for the homepage animation.',
+      description:
+        'Upload images here for the homepage animation. *** They must be labeled pic1.jpg, pic2.jpg, pic3.jpg ***',
     },
   ] as const,
 
