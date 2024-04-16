@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/all";
 import ScrollingText from "./ScrollingText";
 import { client } from "@/app/lib/sanity";
 import { IHomepagePictures } from "@/app/lib/interface";
+import Image from 'next/image';
 
 async function getData(): Promise<IHomepagePictures[]> {
     const query = `*[_type == "homepagePictures"]{
@@ -42,14 +43,14 @@ const PicturesAnimate: React.FC = () => {
                 scrollTrigger: {
                     trigger: ".secondvideo",
                     start: "center center",
-                    end: "500% center",
+                    end: "200% center",
                     scrub: true,
                     markers: true
                 }
             });
 
             tl.to(".secondvideo", {
-                y: "100vh",
+                y: "120vh",
                 rotation: 0,
                 ease: "none",
                 duration: 3
@@ -74,18 +75,24 @@ const PicturesAnimate: React.FC = () => {
         <>
             <div className='pt-500 relative z-10'>
                 <div className='w-full min-h-screen grid place-items-center'>
-                    <div style={{ width: '52vw', height: '26vh' }} className='relative'>
+                    <div className='relative' style={{ width: '52vw', height: '46vh' }}>
                         {images.length >= 1 &&
                             <div className='absolute inset-0 grid place-items-center' style={{ transform: 'rotate(-3deg)' }}>
-                                <img src={images[0]} alt="First Visual" className="w-full h-full object-cover rounded-lg" />
+                                <div style={{ width: '100%', height: '100%', position: 'relative' }}>
+                                    <Image src={images[0]} alt="First Visual" layout="fill" objectFit="cover" className="rounded-lg" />
+                                </div>
                             </div>}
                         {images.length >= 2 &&
                             <div className='secondvideo absolute inset-0 grid place-items-center' style={{ transform: 'rotate(3deg)' }}>
-                                <img src={images[1]} alt="Second Visual" className="w-full h-full object-cover rounded-lg" />
+                                <div style={{ width: '100%', height: '100%', position: 'relative' }}>
+                                    <Image src={images[1]} alt="Second Visual" layout="fill" objectFit="cover" className="rounded-lg" />
+                                </div>
                             </div>}
                         {images.length >= 3 &&
                             <div className='absolute inset-0 grid place-items-center' style={{ transform: 'rotate(20deg)' }}>
-                                <img src={images[2]} alt="Third Visual" className="w-full h-full object-cover rounded-lg" />
+                                <div style={{ width: '100%', height: '100%', position: 'relative' }}>
+                                    <Image src={images[2]} alt="Third Visual" layout="fill" objectFit="cover" className="rounded-lg" />
+                                </div>
                             </div>}
                     </div>
                 </div>

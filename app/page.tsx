@@ -22,7 +22,7 @@ export default function Home() {
     <>
       <PicturesAnimate />
       <div style={{ paddingTop: '92vh' , paddingLeft: '8rem'  }}>
-        <h1>something</h1>
+        <p>this is some text</p>
       </div>
       <div style={{ paddingTop: '120vh' }}>
         <h1>something</h1>
