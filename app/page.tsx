@@ -23,9 +23,8 @@ export default function Home() {
   return (
     <>
       <PicturesAnimate />
-      <ScrollingText/>
-      <div style={{ paddingTop: '100vh' }}>
-        testing
+      <div style={{ paddingTop: '120vh' }}>
+        <h1>something</h1>
       </div>
 
     </>
