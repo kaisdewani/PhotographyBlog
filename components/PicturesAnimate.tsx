@@ -63,7 +63,7 @@ const PicturesAnimate: React.FC = () => {
 
       tl.to(".secondvideo", {
         y: isMobile ? '95vh' : "120vh",
-        x: isMobile ? '-4vh' : "120vh",
+        x: isMobile ? '-4vh' : "0",
         rotation: 0,
         ease: "none",
         duration: 3
