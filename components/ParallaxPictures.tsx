@@ -48,7 +48,7 @@ const ParallaxPictures: React.FC = () => {
                     <div key={index} ref={el => {
                         imgRefs.current[index] = el; // Corrected the ref assignment
                     }} className="absolute top-0 w-full h-full flex items-center justify-center">
-                        <div className={`relative w-1/4 h-1/4 ${calculatePosition(index)}`}>
+                        <div className={`relative w-1/4 h-1/4 ${calculatePosition(index)} rounded-lg overflow-hidden`}>
                             <Image
                                 src={src}
                                 layout="fill"
