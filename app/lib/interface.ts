@@ -21,3 +21,15 @@ export interface simpleBlogCard {
   smallDescription: string;
   currentSlug: string;
 }
+
+export interface AlbumImage {
+  imageUrl: string; // Assuming images[0].asset->url returns a string URL
+  eventName: string;
+}
+
+// This could be an array of AlbumImage objects
+export interface AlbumData {
+  slug: any;
+  eventName: string;
+  imageUrl: string;
+}

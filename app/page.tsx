@@ -7,6 +7,7 @@ import { useEffect } from "react";
 
 
 import ParallaxPictures from "@/components/ParallaxPictures";
+import GridAlbums from "@/components/GridAlbums";
 
 
 
@@ -25,15 +26,15 @@ export default function Home() {
   return (
     <>
       <PicturesAnimate />
-      <div style={{ paddingTop: '90vh'}}>
+      <div style={{ paddingTop: '90vh' }}>
         <RevealText />
       </div>
       {/* <div style={{ paddingTop: '120vh' }}> */}
-        <ParallaxPictures />
+      <ParallaxPictures />
       {/* </div> */}
-      <div style={{ paddingTop: '120vh' }}>
-        <h1>something</h1>
-      </div>
+      {/* <div style={{ paddingTop: '3vh' }}> */}
+      <GridAlbums />
+      {/* </div> */}
     </>
   );
 }
