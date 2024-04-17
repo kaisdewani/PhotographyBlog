@@ -22,13 +22,13 @@ const ParallaxPictures: React.FC = () => {
             const scales = [4, 5, 6, 5, 6, 8, 9]; // Scale factors for each image
             if (img) {
                 gsap.fromTo(img, 
-                    { scale: 1 }, 
+                    { scale: 1, duration: 0.2 }, 
                     {
                         scale: scales[index],
                         scrollTrigger: {
                             trigger: img,
                             start: "bottom bottom", // Animation starts when the top of img hits the bottom of the viewport
-                            end: "200% center",
+                            end: "bottom center",
                             scrub: true, // Smooth scrubbing
                             markers: true, // Optional: Shows start and end markers in development
                         }
