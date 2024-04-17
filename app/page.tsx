@@ -8,7 +8,6 @@ import { useEffect } from "react";
 
 import ParallaxPictures from "@/components/ParallaxPictures";
 import GridAlbums from "@/components/GridAlbums";
-import ShiftingContactForm from "@/components/ShiftingContactForm";
 
 
 
@@ -36,7 +35,6 @@ export default function Home() {
       {/* <div style={{ paddingTop: '3vh' }}> */}
       <GridAlbums />
       {/* </div> */}
-      <ShiftingContactForm />
     </>
   );
 }
