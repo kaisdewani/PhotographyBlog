@@ -15,15 +15,16 @@
     "sanity"
   ],
   "dependencies": {
-    "@sanity/vision": "^3.37.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "sanity": "^3.37.2",
-    "styled-components": "^6.1.8"
+    "@sanity/vision": "6.24.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "sanity": "6.24.0",
+    "styled-components": "^6.1.15"
   },
   "devDependencies": {
     "@sanity/eslint-config-studio": "^4.0.0",
-    "@types/react": "^18.0.25",
+    "@sanity/types": "6.24.0",
+    "@types/react": "^19.3.0",
     "eslint": "^8.6.0",
     "prettier": "^3.0.2",
     "typescript": "^5.1.6"
@@ -33,5 +34,8 @@
     "printWidth": 100,
     "bracketSpacing": false,
     "singleQuote": true
+  },
+  "engines": {
+    "node": "24.x"
   }
 }
